@@ -95,6 +95,10 @@ h1.reg-tittle {
   font-family: "Arial", sans-serif;
   font-size: 2em;
 }
+
+h1, h2, h3 {
+  font-family: "Arial", sans-serif;
+}
 .loc-info {              /* was .adress*/
   margin-bottom: 0.5rem;
 }

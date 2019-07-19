@@ -112,6 +112,12 @@ let addReview = function(req, res ){
    })
 } 
 
+let roadHoles = function(req, res){
+  
+    res.render('road-holes', {
+       title: ''
+    })  
+}
 module.exports.homelist = homeList;
 module.exports.locationInfo = locationInfo;
 module.exports.addReview = addReview;
