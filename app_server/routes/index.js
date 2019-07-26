@@ -10,6 +10,6 @@ const router = express.Router();
 router.get('/', ctrlLocations.homelist);
 router.get('/location', ctrlLocations.locationInfo);
 router.get('/location/review/new', ctrlLocations.addReview);
-
+router.get('/road/holes', ctrlLocations.roadHoles)
 router.get('/about', ctrlOthers.about);
 module.exports = router;

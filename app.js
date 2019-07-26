@@ -18,6 +18,7 @@ app.use(logger('dev'));   // logs requests information to console
 
 
 app.use(express.static(path.join(__dirname, 'public'))); // maps root path '/' in req url to 'public' folder  
+//app.use('/javascript',express.static(path.join(__dirname, 'public/javacript'))); // maps root path '/' in req url to 'public' folder  
 
 app.use(express.json());  // parses req body that is in JSON format and puts it in -> req.body (application/json)
 app.use(express.urlencoded({ extended: false })); // parses req body that has application/x-www-form-urlencoded
@@ -35,13 +36,13 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+   // set locals, only providing error in development
+   res.locals.message = err.message;
+   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+   // render the error page
+   res.status(err.status || 500);
+   res.render('error');
 });
 
 module.exports = app;
